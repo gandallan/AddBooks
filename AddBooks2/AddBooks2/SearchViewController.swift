@@ -8,8 +8,6 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 
 
 class SearchViewController: UIViewController {
@@ -126,6 +124,7 @@ class SearchViewController: UIViewController {
     
     
 //*****************Funcino añadir titulo
+    
     @IBAction func addBookFound(sender: UIBarButtonItem) {
     
       Libros.append(bookTitle.text!)
@@ -137,6 +136,30 @@ class SearchViewController: UIViewController {
         searchISBN.text = ""
 
         NSUserDefaults.standardUserDefaults().setObject(Libros, forKey: "Libros")
+        anadirLibroAlert()
+        
+    }
+    
+//************ function Alert
+    func anadirLibroAlert(){
+    
+        let alerta = UIAlertController(title: "Confirmado", message: "Tu libro se ha añadido a tu lista con éxito", preferredStyle: .ActionSheet)
+        /*
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .Cancel){
+            (action:UIAlertAction!) in
+            
+            print("pulsaste cancelar")
+        }
+        */
+        let OkAction = UIAlertAction(title: "OK", style: .Default){
+            (action:UIAlertAction!) in
+            
+            //print("pulsaste Ok")
+        }
+        
+        alerta.addAction(OkAction)
+        
+        self.presentViewController(alerta, animated: true, completion: nil)
     }
     
     

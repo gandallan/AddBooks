@@ -78,16 +78,17 @@ class MainTableViewController: UITableViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+        /*
         if segue.identifier == "showDetails"{
             
             let libroSeleccinado = sender as! Int
+            print(libroSeleccinado)
         
             //let DetailsView: DetailsViewController = segue.destinationViewController as! DetailsViewController
             
             
         }
-        
+        */
         
     }
     
