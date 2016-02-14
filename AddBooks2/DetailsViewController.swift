@@ -8,16 +8,14 @@
 
 import UIKit
 
-//*********Variables globales
-
-var detalleTitulo:String!
-var detalleAuthor:String!
-var detallePortada: UIImage!
-
 
 class DetailsViewController: UIViewController {
-    
 
+//*********Variables
+    
+    var detalleTitulo:String?
+    var detalleAuthor:String?
+    var detallePortada: UIImage?
     
 //**********Segues
     @IBOutlet weak var bookTitle: UILabel!
@@ -35,24 +33,5 @@ class DetailsViewController: UIViewController {
         portadaLibro.image = detallePortada
     }
     
-    
-/*
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-*/
-
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
-        
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-
 
 }
